@@ -1,15 +1,24 @@
 package com.anilkarabulut.aiemail.models.dtos;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDateTime;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class SubscriptionResponse {
 
-    String planId
+    private String planId;
 
-    String status
+    private SubscriptionStatus status;
 
-    LocalDateTime trialEndsAt
+    private LocalDateTime trialEndsAt;
 
-    LocalDateTime currentPeriodEndsAt
+    private LocalDateTime currentPeriodEndsAt;
 
 }
